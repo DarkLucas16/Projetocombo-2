@@ -1,44 +1,82 @@
-:root {
-    --branco-principal: #ffffff;
-    --cinza-secundario: #C0C0C0;
-    --botao-azul: #167BF7;
-    --cor-de-fundo: #00030C;
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
 
+:root{
+    --cor-de-fundo:#1E1E1E;
+    --verde:#6FFF57;
+    --branco:#FFFFFF;
+    --botao-ativo:#3A375E;
+    --botao-inativo: rgba(58,55,94,0.5);
+    --texto-fundo: rgba(58,55,94,0.3);
+
+    
 }
 
 body{
-        background-color: var(--cor-de-fundo);
-        color:var(--branco-principal);
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: "Chakra Petch", sans-serif;
 }
 
-* { 
-    margin: 0;
-    padding: 0;
+.conteudo-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.principal  {
-    background-image: url("img/Background.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+.titulo-principal{
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
 }
 
-.container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 50% 50%;
+.titulo-principal span{
+    color: var(--verde);
 }
 
-.container__botao { 
-    background-color: var(--botao-azul); 
-    border-radius: 5px;
+.botoes{
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
     padding: 1em;
-    color: var(--branco-principal);
-    display: block;
-
+    font-size: 18px;
+    align-items: center;
+    width: 100px;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 4px solid var(--botao-ativo);
+    border-right: 4px solid var(--botao-ativo);
+    border-top: none;
 
 }
 
-.botao_secundario{
-    background-color: transparent;
-    border: 2px solid var var(--branco-principal);
+.botao:first-of-type{
+    border-radius: 40px 40px 0 0;
+}
+
+.botoes{
+    display: block;
+}
+
+.ativo{
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+ 
+@media screen and (min-width:768px) {
+    .botoes{
+        display: flex;
+    }
+    
+}
+.botao:first-of-type{
+    border-radius: 40px 40px 0 0 0;
+}
+
+.botao:first-of-type{
+    border-radius: 0 40px 0 0;
 }
